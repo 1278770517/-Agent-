@@ -8,6 +8,7 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 
 from A_frist_version_projct.child_graph_basemodel import ToFlightBookingAssistant, ToBookCarRental, \
     ToHotelBookingAssistant, ToBookExcursion
+from sperviser_agent.util import QWEN_API_KEY
 from tools.car_tools import search_car_rentals, book_car_rental, update_car_rental, cancel_car_rental
 from tools.flights_tools import fetch_user_flight_information, search_flights, update_ticket_to_new_flight, \
     cancel_ticket
@@ -107,7 +108,7 @@ def run_CtripAssinstant()->CtripAssinstant:
         """
     LLM = ChatTongyi(
         model='qwen-plus',  # 建议使用 qwen-plus 或 qwen-max，它们对工具调用支持更好
-        api_key='sk-6b4cfd663e22498b8f82b39e798912c8',
+        api_key=QWEN_API_KEY,
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         temperature=0.8,
     )

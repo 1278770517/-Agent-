@@ -267,7 +267,6 @@ workflow.add_conditional_edges('ctripassitant',rout_func,{END:END,
                                                           'enter_book_hotel':'enter_book_hotel',
                                                          'enter_book_excursion':'enter_book_excursion',
                                                           'tools':'tools'
-
                                                           })
 workflow.add_edge('tools','ctripassitant')
 workflow.add_edge('leave_node','ctripassitant')
